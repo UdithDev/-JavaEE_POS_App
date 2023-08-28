@@ -7,8 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71eb8fa2-318e-4d1a-b973-0ca9e60d6eae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/pos_app.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_End/src/jsp/servlet/PurchaseOrderServletAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/src/jsp/servlet/PurchaseOrderServletAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back_End/src/jsp/servlet/CustomerServletAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/src/jsp/servlet/CustomerServletAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/controller/customerControler.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/controller/customerControler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/controller/itemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/controller/itemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/controller/ordersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/controller/ordersController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/pos_app/pos_app.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/pos_app/pos_app.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Back_End/jsp/servlet/CustomerServletAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Back_End/jsp/servlet/CustomerServletAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Back_End/jsp/servlet/PurchaseOrderServletAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Back_End/jsp/servlet/PurchaseOrderServletAPI.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,18 +65,16 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.90" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.90" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="pos_app">
+        <artifact name="app">
           <settings>
-            <option name="CONTEXT_PATH" value="/pos_app" />
+            <option name="CONTEXT_PATH" value="/app" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="252c3c42-d1ac-4e43-8a61-2359909402da" />
-        <option name="HTTP_PORT" value="8081" />
+        <option name="BASE_DIRECTORY_NAME" value="a46e905a-728f-4ec3-a707-9c54a153a2a5" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -76,7 +82,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="7694" />
+        <option name="DEBUG_PORT" value="10934" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -141,7 +147,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="pos_app" />
+          <artifact name="app" />
         </option>
       </method>
     </configuration>
@@ -155,7 +161,7 @@
       <option name="presentableId" value="Default" />
       <updated>1693130753444</updated>
       <workItem from="1693130755214" duration="1279000" />
-      <workItem from="1693193613468" duration="4785000" />
+      <workItem from="1693193613468" duration="7877000" />
     </task>
     <servers />
   </component>

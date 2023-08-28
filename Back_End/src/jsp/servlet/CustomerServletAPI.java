@@ -30,14 +30,17 @@ public class CustomerServletAPI extends HttpServlet {
                 String id = rst.getString(1);
                 String name = rst.getString(2);
                 String address = rst.getString(3);
+                String salary = rst.getString(4);
 
                 JsonObjectBuilder customerObject = Json.createObjectBuilder();
                 customerObject.add("id", id);
                 customerObject.add("name", name);
                 customerObject.add("address", address);
+                customerObject.add("salary",salary);
                 allCustomers.add(customerObject.build());
             }
 
+            System.out.println(allCustomers);
             resp.getWriter().print(allCustomers.build());
 
         } catch (ClassNotFoundException e) {
@@ -55,16 +58,18 @@ public class CustomerServletAPI extends HttpServlet {
         String cusID = req.getParameter("cusID");
         String cusName = req.getParameter("cusName");
         String cusAddress = req.getParameter("cusAddress");
+        String cusSalary = req.getParameter("cusSalary");
 
         resp.addHeader("Content-Type", "application/json");
         resp.addHeader("Access-Control-Allow-Origin", "*");
         try {
             Connection connection = DBConnection.getDBConnection().getConnection();
-            PreparedStatement pstm = connection.prepareStatement("insert into customer values(?,?,?)");
+            PreparedStatement pstm = connection.prepareStatement("insert into customer values(?,?,?,?)");
 
             pstm.setObject(1, cusID);
             pstm.setObject(2, cusName);
             pstm.setObject(3, cusAddress);
+            pstm.setObject(4,1000);
 
             if (pstm.executeUpdate() > 0) {
                 showMessage(resp, cusID + " Successfully Added..!", "ok", "[]");
@@ -92,16 +97,18 @@ public class CustomerServletAPI extends HttpServlet {
         String cusID = jsonObject.getString("cusID");
         String cusName = jsonObject.getString("cusName");
         String cusAddress = jsonObject.getString("cusAddress");
+        String cusSalary = jsonObject.getString("cusSalary");
 
         resp.addHeader("Content-Type", "application/json");
         resp.addHeader("Access-Control-Allow-Origin", "*");
         try {
             Connection connection = DBConnection.getDBConnection().getConnection();
-            PreparedStatement pstm3 = connection.prepareStatement("update customer set cusName=?,cusAddress=? where cusID=?");
+            PreparedStatement pstm3 = connection.prepareStatement("update customer set cusName=?,cusAddress=? ,cusSalary=? where cusID=?");
 
-            pstm3.setObject(3, cusID);
-            pstm3.setObject(1, cusName);
-            pstm3.setObject(2, cusAddress);
+            pstm3.setObject(1, cusID);
+            pstm3.setObject(2, cusName);
+            pstm3.setObject(3, cusAddress);
+            pstm3.setObject(4,cusSalary);
 
             if (pstm3.executeUpdate() > 0) {
                 showMessage(resp, cusID + " Customer Updated..!", "ok", "[]");

@@ -1,6 +1,6 @@
 package jsp.servlet;
 
-import lk.ijse.jsp.servlet.util.DBConnection;
+import jsp.servlet.util.DBConnection;
 
 import javax.json.*;
 import javax.servlet.annotation.WebServlet;
